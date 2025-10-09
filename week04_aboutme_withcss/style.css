@@ -1,0 +1,175 @@
+/* 全域樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "微軟正黑體", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #38b2ac 0%, #5a67d8 100%);/* 背景漸層顏色：青綠→靛紫 */
+  padding: 20px;
+  line-height: 1.8;
+}
+
+/* 容器樣式 */
+.container {
+  max-width: 900px;/* 容器最大寬度：改成 900px */
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* 主標題 */
+h1 {
+  color: #2c7a7b;/* 主標題顏色：深青綠 */
+  text-align: center;
+  font-size: 3em;/*主標題字體大小：改成 3em*/
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #667eea;
+}
+
+/* 區段樣式 */
+.section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-10px);/* 區塊懸停移動距離：改成 -10px */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 副標題 */
+h2 {
+  color: #4c51bf; /* 副標題顏色：靛紫 */
+  font-size: 2em;/*副標題字體大小：改成 2em*/
+  margin-bottom: 15px;
+  padding-left: 15px;
+  border-left: 5px solid #764ba2;
+}
+
+/* 段落 */
+p {
+  color: #555;
+  margin: 10px 0;
+  padding-left: 15px;
+}
+
+strong {
+  color: #667eea;
+  font-size: 1.1em;
+}
+
+/* 列表樣式 */
+ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+li {
+  color: #555;
+  margin: 10px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+li::before {
+  content: "➤";/* 列表項目符號：改成"➤" */
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* 表格樣式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #2c7a7b;/* 表格標題背景色：青綠 */
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #f0f0ff;
+}
+
+/* 超連結樣式 */
+a {
+  color: #2b6cb0;/* 超連結顏色：藍色 */
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: #764ba2;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #764ba2;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* 圖片樣式 */
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  border: 5px solid #667eea;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* 頁腳樣式 */
+.footer {
+  text-align: center;   
+  margin-top: 24px;     
+  color: #718096;       
+  font-size: 0.95rem;   
+}

@@ -9,3 +9,6 @@
 - 建立html檔案
 ## 0924
 - 完成 About me 頁面基本架構
+## 1009
+- 進行CSS樣式練習
+- 修改aboutme.html
