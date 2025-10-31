@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>註冊表單</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">註冊表單</h1>
+
+    <div id="success-banner" class="banner banner--success" role="status" aria-live="polite" hidden>
+    註冊成功
+    </div>
+
+    <form id="signup-form" class="card" novalidate>
+      <div class="field">
+        <label for="name">姓名 <span class="req">*</span></label>
+        <input id="name" name="name" type="text" required
+               aria-describedby="name-error" autocomplete="name" />
+        <p id="name-error" class="error-msg" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="req">*</span></label>
+        <input id="email" name="email" type="email" required
+               aria-describedby="email-error" autocomplete="email" />
+        <p id="email-error" class="error-msg" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="phone">手機（10 碼數字）<span class="req">*</span></label>
+        <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="\\d{10}" required
+               aria-describedby="phone-error" autocomplete="tel" />
+        <p id="phone-error" class="error-msg" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="password">密碼（至少 8 碼，英數混合）<span class="req">*</span></label>
+        <input id="password" name="password" type="password" required
+               aria-describedby="password-error password-hint" autocomplete="new-password" />
+        <p id="password-error" class="error-msg" role="alert" aria-live="polite"></p>
+        <p id="password-hint" class="hint">需同時包含英文字母與數字，長度 ≥ 8。</p>
+      </div>
+
+      <div class="field">
+        <label for="confirmPassword">確認密碼 <span class="req">*</span></label>
+        <input id="confirmPassword" name="confirmPassword" type="password" required
+               aria-describedby="confirmPassword-error" autocomplete="new-password" />
+        <p id="confirmPassword-error" class="error-msg" role="alert" aria-live="polite"></p>
+      </div>
+
+      <fieldset class="field">
+        <legend>興趣標籤（至少選 1 個）<span class="req">*</span></legend>
+        <div id="interest-group" class="tags" aria-describedby="interests-error">
+          <label class="tag">
+            <input type="checkbox" name="interests" value="eat" />
+            <span>吃飯</span>
+          </label>
+          <label class="tag">
+            <input type="checkbox" name="interests" value="sleep" />
+            <span>睡覺</span>
+          </label>
+          <label class="tag">
+            <input type="checkbox" name="interests" value="phone" />
+            <span>滑手機</span>
+          </label>
+          <label class="tag">
+            <input type="checkbox" name="interests" value="sport" />
+            <span>運動</span>
+          </label>
+        </div>
+        <div class="inline">
+          <p id="interests-count" class="hint">已選：0</p>
+        </div>
+        <p id="interests-error" class="error-msg" role="alert" aria-live="polite"></p>
+      </fieldset>
+
+      <div class="field">
+        <label class="checkbox">
+          <input id="tos" name="tos" type="checkbox" required aria-describedby="tos-error" />
+          <span>我已閱讀並同意服務條款</span>
+        </label>
+        <p id="tos-error" class="error-msg" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="actions">
+        <button id="submit-btn" type="submit" class="btn btn--primary">送出</button>
+        <button type="reset" class="btn btn--ghost" id="reset-btn">清除</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="./signup_form.js" defer></script>
+</body>
+</html>
